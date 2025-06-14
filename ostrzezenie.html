@@ -3,35 +3,55 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>🚨 Uwaga!</title>
+    <title>⚠️ Ostrzeżenie</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
             background: #ffebee;
             color: #b71c1c;
-            padding: 2rem;
             text-align: center;
+            padding: 2rem;
         }
-        h1 {
-            font-size: 2em;
-        }
-        p {
-            font-size: 1.1rem;
+        .alert-box {
+            background: white;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: auto;
+            padding: 2rem;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            animation: pulse 3s infinite;
         }
         a {
-            color: #880e4f;
+            display: inline-block;
+            margin-top: 1rem;
+            background: #d32f2f;
+            color: white;
             text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
             font-weight: bold;
+            animation: blink 1.5s infinite;
         }
         a:hover {
-            text-decoration: underline;
+            background: #c62828;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(244, 67, 54, 0.3); }
+            70% { box-shadow: 0 0 0 20px rgba(244, 67, 54, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(244, 67, 54, 0); }
         }
     </style>
 </head>
 <body>
-    <h1>❌ Dałeś się złapać!</h1>
-    <p>To była tylko symulacja. Nigdy nie podawaj danych na nieznanych stronach!</p>
-    <p><a href="porady.html">Zobacz 5 zasad cyberbezpieczeństwa</a></p>
+    <div class="alert-box">
+        <h1>❌ Dałeś się złapać!</h1>
+        <p>To była tylko symulacja phishingu – zachowaj ostrożność!</p>
+        <a href="porady.html">Zobacz 5 zasad bezpieczeństwa</a>
+    </div>
 </body>
 </html>
